@@ -17,18 +17,15 @@ function ListBox() {
 
   const addEmptyItem = () => {
     dispatch(addItem("Add New Task"));
+    if (bottomRef.current) {
+      bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const deleteItem = (idx) => dispatch(removeItem(idx));
   const handleChange = (e, idx) =>
     dispatch(editItem({ index: idx, value: e.target.value }));
   const handleToggle = (idx) => dispatch(toggleComplete(idx));
-
-  useEffect(() => {
-    if (bottomRef.current) {
-      bottomRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [todoList]);
 
   return (
     <div className="relative">
