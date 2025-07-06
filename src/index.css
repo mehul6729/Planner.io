@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* Reset some default browser styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Set a smooth scrolling effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Apply styles to the whole page */
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #191919;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Make sure images don't exceed their container */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove list styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Reset anchor styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  color: inherit;
+}
+
+span {
+  color: inherit;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge (Chromium) */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.gradient-text {
+  font-weight: 700;
+  background: linear-gradient(90deg, #13b0f5, #e70faa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
